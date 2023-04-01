@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rEe/5oL+ON1Ac+x8LUL2TQuuuwrvdGWreS1jqp9/xkPS8BUMZNPBBGApLdLHFKTQ673sObDcld0wDnJK9Q52hA==",
+  "success": true,
+  "projectFilePath": "D:\\MDF\\Projects\\OTHER\\Technical Test 2022\\Agroveta\\POWeb\\POFrontEnd\\POFrontEnd\\POFrontEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\muhamad.firdaus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\muhamad.firdaus\\.nuget\\packages\\restsharp\\109.0.1\\restsharp.109.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model POViewModels
+
+<div class="containers" style="margin-top: -5%;">
+
+    <div class="container">
+        <form id="contactform" method="post">
+            <button id="po_more" class="MasterBank_more" type="button" style="width: 100%;">BANK - ADD</button>
+            <div class="data-input">
+                <panelPO><h4><div class="bgc-menu">Informasi Vendor </div></h4></panelPO>
+                <PO id="InformasVendor">
+                    <div class="tile">
+                        <div class="form-group row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>Nama Vendor</p>
+                                <input type="text" id="txNamaVendor" asp-for="POVendor.Nama" class="form-control" placeholder="Nama Vendor">
+
+                                <p style="margin-top: 2%;">Alamat</p>
+                                <input type="text" id="txalamat" asp-for="POVendor.Alamat" class="form-control" placeholder="Alamat">
+
+                                <p style="margin-top: 2%;">No Telp</p>
+                                <input type="text" id="txNoTelp" asp-for="POVendor.NoTelp" class="form-control" placeholder="No Telp">
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                <p>Contact Person</p>
+                                <input type="text" id="txcontactperson" class="form-control" asp-for="POVendor.ContactPerson" placeholder="Contact Person">
+
+                                <p>Email</p>
+                                <input type="text" id="txemail" class="form-control" placeholder="Email" asp-for="POVendor.Email">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </PO>
+            </div>
+
+            <div class="data-input">
+                <panelPO><h4><div class="bgc-menu">Informasi Pelanggan </div></h4></panelPO>
+                <PO id="InformasiPelanggan">
+                    <div class="tile">
+                        <div class="form-group row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>Nama Pelanggan</p>
+                                <input type="text" id="txNamaPelanggan" asp-for="PelangganModels.Nama" class="form-control" placeholder="Nama Pelanggan">
+
+                                <p style="margin-top: 2%;">Alamat</p>
+                                <input type="text" id="txalamatpelanggan" class="form-control" asp-for="PelangganModels.Alamat" placeholder="Alamat">
+
+                                <p style="margin-top: 2%;">No Telp Pelanggan</p>
+                                <input type="text" id="txNoTelpPelanggan" class="form-control" placeholder="No Telp" asp-for="PelangganModels.NoTelp">
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                <p>Contact Person</p>
+                                <input type="text" id="txcontactpersonpelanggan" class="form-control" asp-for="PelangganModels.ContactPerson" placeholder="Contact Person">
+
+                                <p>Email</p>
+                                <input type="text" id="txemailpelanggan" class="form-control" placeholder="Email" asp-for="PelangganModels.Email">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </PO>
+            </div>
+
+            <div class="data-input">
+                <panelPO><h4><div class="bgc-menu">Info Pengiriman </div></h4></panelPO>
+                <PO id="InformasiKirim">
+                    <div class="tile">
+                        <div class="form-group row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>Shipment Via</p>
+                                <input type="text" id="txshipvia" asp-for="POShipments.ShipVia" class="form-control" placeholder="Shipment Via">
+
+                                <p style="margin-top: 2%;">Shipment Tern</p>
+                                <input type="text" id="txshipterm" class="form-control" asp-for="POShipments.ShipTerms" placeholder="Shipment Terms">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </PO>
+            </div>
+
+            <div class="data-input">
+                <panelPO><h4><div class="bgc-menu">Item Unit Detail </div></h4></panelPO>
+                <PO id="ItemUnit">
+                    <div class="tile">
+                        <div class="form-group row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>Keterangan</p>
+                                <input type="text" id="txketerangan" asp-for="PODetails.Keterangan" class="form-control" placeholder="Keterangan">
+
+                                <p style="margin-top: 2%;">Unit</p>
+                                <input type="text" id="txalamatpelanggan" class="form-control" asp-for="PODetails.Unit" placeholder="Unit">
+
+                                <p style="margin-top: 2%;">Qty</p>
+                                <input type="text" id="txNoTelpPelanggan" class="form-control" placeholder="Qty" asp-for="PODetails.Qty">
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                <p>Harga Unit</p>
+                                <input type="text" id="txhargaunit" class="form-control" placeholder="Harga Unit" asp-for="PODetails.HargaUnit">
+
+                                <p>Total</p>
+                                <input type="text" id="txtotal" class="form-control" placeholder="Total" asp-for="PODetails.Total">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </PO>
+            </div>
+
+            <div>
+                <button class="btn btn-success" asp-controller="Home" asp-action="OnSubmitPO" style="height:50px;width:100px" id="btnsave">Simpan</button>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
