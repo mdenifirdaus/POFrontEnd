@@ -9,6 +9,41 @@
     <div class="container">
         <form id="contactform" method="post">
             <button id="po_more" class="MasterBank_more" type="button" style="width: 100%;">BANK - ADD</button>
+
+            <div class="data-input">
+                <panelPO><h4><div class="bgc-menu">Headers </div></h4></panelPO>
+                <PO id="headers">
+                    <div class="tile">
+                        <div class="form-group row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>PerusahaanTujuan</p>
+                                <input type="text" id="txperusahaantujuan" asp-for="POHeaders.PerusahaanTujuan" class="form-control" placeholder="Perusahaan Tujuan">
+
+                                <p style="margin-top: 2%;">Alamat Perusahaan</p>
+                                <input type="text" id="txalamatperusahaan" asp-for="POHeaders.AlamatPerusahaan" class="form-control" placeholder="Alamat">
+
+                                <p style="margin-top: 2%;">No Telp</p>
+                                <input type="text" id="txNoTelpperusahaan" asp-for="POHeaders.NoTelp" class="form-control" placeholder="No Telp">
+
+                                <p style="margin-top: 2%;">Website</p>
+                                <input type="text" id="txweb" asp-for="POHeaders.Website" class="form-control" placeholder="Website">
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border-right: 2px solid #e8e8e8">
+
+                                <p>Catatan Tambahan</p>
+                                <input type="text" id="txctatantambahan" asp-for="POHeaders.CatatanTambahan" class="form-control" placeholder="Catatan Tambahan">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </PO>
+            </div>
+
             <div class="data-input">
                 <panelPO><h4><div class="bgc-menu">Informasi Vendor </div></h4></panelPO>
                 <PO id="InformasVendor">

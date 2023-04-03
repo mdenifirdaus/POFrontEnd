@@ -33,6 +33,9 @@ namespace POFrontEnd.Controllers
 
         public IActionResult OnSubmitPO(POViewModels models)
         {
+            models.POHeaders.Nama = models.PelangganModels.Nama;
+            models.POHeaders.Jabatan = models.PelangganModels.ContactPerson;
+            models.POHeaders.Email = models.POVendor.Email;
 
             var api = new ReqAPI();
             var res = api.GetAPIResponse("https://localhost:44371/api/po/insert/po", Method.Post,models);
